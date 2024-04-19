@@ -41,47 +41,47 @@ echo "************************************************************************"
 case $Scan_Method in
    
       1)  # Basic Scan
-              nmap $IP_Host > $Output_file
+              nmap --script firewall-bypass $IP_Host > $Output_file
               ;;
             
       2)  # Stealth Scan
-              nmap -sS $IP_Host > $Output_file
+              nmap --script firewall-bypass -sS $IP_Host > $Output_file
               ;;
     
       3)  # Scan All Ports
-              nmap -p- $IP_Host > $Output_file
+              nmap --script firewall-bypass -p- $IP_Host > $Output_file
               ;;
                 
       4)  # Scan A Range Of ips
-              nmap $IP_Host > $Output_file
+              nmap --script firewall-bypass $IP_Host > $Output_file
              ;;
        
       5)  # Aggresive scan 
-              nmap -A $IP_Host > $Output_file
+              nmap --script firewall-bypass -A $IP_Host > $Output_file
               ;;
             
       6)  # Scan For OS Detection
-              nmap -O $IP_Host > $Output_file
+              nmap --script firewall-bypass -O $IP_Host > $Output_file
               ;;
 
       7)  # Service Version Detection 
-              nmap -sV $IP_Host > $Output_file
+              nmap --script firewall-bypass -sV $IP_Host > $Output_file
               ;;
 
       8)  # Ping Scan
-              nmap -sn $IP_Host > $Output_file
+              nmap --script firewall-bypass -sn $IP_Host > $Output_file
               ;;
      
      10) # Fast Scan
-              nmap -F $IP_Host > $Output_file
+              nmap --script firewall-bypass -F $IP_Host > $Output_file
           ;;
 
     11) # TCP Scan
-              nmap -sT $IP_Host > $Output_file
+              nmap --script firewall-bypass -sT $IP_Host > $Output_file
           ;;
     
     12) # UDP Scan
-              nmap -sU $IP_Host > $Output_file
+              nmap --script firewall-bypass-sU $IP_Host > $Output_file
           ;;
 
     13) # Scan For Common Vulnerabilities
