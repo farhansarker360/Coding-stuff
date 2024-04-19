@@ -41,47 +41,47 @@ echo "************************************************************************"
 case $Scan_Method in
    
       1)  # Basic Scan
-              nmap --script firewall-bypass $IP_Host > $Output_file
+              nmap --script vuln $IP_Host > $Output_file
               ;;
             
       2)  # Stealth Scan
-              nmap --script firewall-bypass -sS $IP_Host > $Output_file
+              nmap --script vuln -sS $IP_Host > $Output_file
               ;;
     
       3)  # Scan All Ports
-              nmap --script firewall-bypass -p- $IP_Host > $Output_file
+              nmap --script vuln -p- $IP_Host > $Output_file
               ;;
                 
       4)  # Scan A Range Of ips
-              nmap --script firewall-bypass $IP_Host > $Output_file
+              nmap --script vuln $IP_Host > $Output_file
              ;;
        
       5)  # Aggresive scan 
-              nmap --script firewall-bypass -A $IP_Host > $Output_file
+              nmap --script vuln -A $IP_Host > $Output_file
               ;;
             
       6)  # Scan For OS Detection
-              nmap --script firewall-bypass -O $IP_Host > $Output_file
+              nmap --script vuln -O $IP_Host > $Output_file
               ;;
 
       7)  # Service Version Detection 
-              nmap --script firewall-bypass -sV $IP_Host > $Output_file
+              nmap --script vuln -sV $IP_Host > $Output_file
               ;;
 
       8)  # Ping Scan
-              nmap --script firewall-bypass -sn $IP_Host > $Output_file
+              nmap --script vuln -sn $IP_Host > $Output_file
               ;;
      
      10) # Fast Scan
-              nmap --script firewall-bypass -F $IP_Host > $Output_file
+              nmap --script vuln -F $IP_Host > $Output_file
           ;;
 
     11) # TCP Scan
-              nmap --script firewall-bypass -sT $IP_Host > $Output_file
+              nmap --script vuln -sT $IP_Host > $Output_file
           ;;
     
     12) # UDP Scan
-              nmap --script firewall-bypass-sU $IP_Host > $Output_file
+              nmap --script vuln -sU $IP_Host > $Output_file
           ;;
 
     13) # Scan For Common Vulnerabilities
