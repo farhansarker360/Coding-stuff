@@ -115,5 +115,5 @@ case $Scan_Method in
     20) # Scan for SSL/TLS Vulnerabilities 
           nmap --script ssl-enum-ciphers $IP_Host > $Output_file
        ;;
-
+       
 esac
